@@ -26,7 +26,7 @@ def excludes = [
         '**/models/**'
 ]
 def javaClasses = fileTree(
-        dir      : 'build/intermediates/javac/debug/classes/com/exaample',
+        dir      : 'build/intermediates/javac/debug/classes/com/example',
         excludes : excludes
 )
 def kotlinClasses = fileTree(

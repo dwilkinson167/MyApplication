@@ -1,3 +1,17 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="date_picker_height">90dp</dimen>
+    <dimen name="login_cv_margin">25dp</dimen>
+    <dimen name="linear_layout_pad">20dp</dimen>
+    <dimen name="cardview_elevation">8dp</dimen>
+    <dimen name="cardview_margin">25dp</dimen>
+    <dimen name="large">500dp</dimen>
+    <dimen name="twentyDp">20dp</dimen>
+    <dimen name="tenDp">10dp</dimen>
+    <dimen name="neg90">-90dp</dimen>
+    <dimen name="twentyEightSp">28sp</dimen>
+    <dimen name="twentyFourSp">24sp</dimen>
+    <dimen name="sixteenSp">16sp</dimen>
+    <dimen name="twentySp">20sp</dimen>
+
 </resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/profilePicture"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/large"
+            android:layout_marginTop="@dimen/neg90"
+            android:layout_marginBottom="@dimen/neg90"
+            android:contentDescription="@string/profilePicture"
+            android:padding="@dimen/tenDp"
+            android:src="@drawable/kilgore" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profilePicture"
+            android:padding="@dimen/tenDp"
+            android:textColor="@color/green"
+            android:textSize="@dimen/twentyEightSp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/ageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profilePicture"
+            android:layout_toEndOf="@+id/nameTextView"
+            android:padding="@dimen/tenDp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/twentyFourSp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/jobTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameTextView"
+            android:padding="@dimen/tenDp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/twentySp" />
+
+        <TextView
+            android:id="@+id/bioTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jobTextView"
+            android:padding="@dimen/tenDp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sixteenSp" />
+    </RelativeLayout>
+</ScrollView>

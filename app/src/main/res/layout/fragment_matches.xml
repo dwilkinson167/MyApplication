@@ -1,7 +1,4 @@
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/card_view"
     android:layout_width="match_parent"
     android:layout_height="@dimen/card_view_layout_height"
@@ -23,8 +20,7 @@
             android:layout_height="@dimen/card_height"
             android:maxWidth="@dimen/matches_image_view_max_width"
             android:maxHeight="@dimen/matches_image_view_max_height"
-            android:scaleType="fitCenter"
-            />
+            android:scaleType="fitCenter" />
 
         <TextView
             android:id="@+id/card_title"
@@ -58,7 +54,8 @@
             android:layout_below="@+id/card_text"
             android:layout_alignParentEnd="true"
             style="?android:attr/borderlessButtonStyle"
-            android:text="@string/like" />
+            android:text="@string/like"
+            android:contentDescription="TODO" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

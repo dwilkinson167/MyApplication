@@ -26,6 +26,23 @@
     <string name="submit">Submit!</string>
     <string name="my_name">Dylan</string>
     <string name="home">Home</string>
+    <string name="like">Like</string>
+    <string name="you_liked">You liked %1$s</string>
+    <string name="network_provider_update">Network provider update</string>
+    <string name="network_provider_started_running">Network provider started running</string>
+    <string name="enable_location">Enable Location</string>
+    <string name="location_message">Your Locations Settings is set to \\\'Off\\\'. Please Enable Location to use this app</string>
+    <string name="location_settings">Location Settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="empty_string" />
+    <string name="sample_database">sample-database</string>
+    <string name="daily_reminder_time">Daily Reminder Time:</string>
+    <string name="maximum_distance_for_matches_search">Maximum Distance for Matches Search:</string>
+    <string name="seeking_male_female_nonbinary">Seeking (Male/Female/Nonbinary):</string>
+    <string name="account_visibility_public_private">Account Visibility (public/private):</string>
+    <string name="age_range_desired">Age Range Desired:</string>
+    <string name="save_settings">Save Settings</string>
+    <string name="settings_saved">Settings saved!</string>
 
     <string name="hello_first_fragment">Create Profile</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>

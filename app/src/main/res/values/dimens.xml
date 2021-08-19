@@ -13,5 +13,34 @@
     <dimen name="twentyFourSp">24sp</dimen>
     <dimen name="sixteenSp">16sp</dimen>
     <dimen name="twentySp">20sp</dimen>
+    <dimen name="card_view_layout_height">400dp</dimen>
+    <dimen name="card_view_margin_top">100dp</dimen>
+    <dimen name="card_view_margin_bottom">20dp</dimen>
+    <dimen name="card_view_margin_start">20dp</dimen>
+    <dimen name="card_view_margin_end">20dp</dimen>
+    <dimen name="matches_relativelayout_margin_top">100dp</dimen>
+    <dimen name="matches_image_view_max_width">50dp</dimen>
+    <dimen name="matches_image_view_max_height">50dp</dimen>
+    <dimen name="card_height">200dp</dimen>
+    <dimen name="card_title_height">40dp</dimen>
+    <dimen name="md_keylines">16dp</dimen>
+    <dimen name="description_text_size">16sp</dimen>
+    <dimen name="cards_button_width">48dp</dimen>
+    <dimen name="cards_button_height">48dp</dimen>
+    <dimen name="recycler_view_padding_bottom">50dp</dimen>
+    <dimen name="recycler_view_padding_top">50dp</dimen>
+    <dimen name="settings_text_views_margin_top">120dp</dimen>
+    <dimen name="settings_text_views_margin_start">50dp</dimen>
+    <dimen name="save_settings_button_margin_top">80dp</dimen>
+    <dimen name="tv_9_marginTop">50dp</dimen>
+    <dimen name="tv_9_marginStart">50dp</dimen>
+    <dimen name="tv_6_marginBottom">50dp</dimen>
+    <dimen name="tv_11_bottom_padding">20dp</dimen>
+    <dimen name="tv_7_paddingBottom">20dp</dimen>
+    <dimen name="tv_13_paddingTop">20dp</dimen>
+    <dimen name="tv_13_paddingBottom">20dp</dimen>
+    <dimen name="tv_12_width">320dp</dimen>
+    <dimen name="tv_7_marginTop">150dp</dimen>
+    <dimen name="tv_7_marginStart">50dp</dimen>
 
 </resources>

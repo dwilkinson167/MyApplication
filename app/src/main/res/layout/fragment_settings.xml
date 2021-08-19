@@ -1,0 +1,142 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/settings_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ThankYou">
+
+        <TextView
+            android:id="@+id/text_view_reminder_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/daily_reminder_time"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/tv_7_marginTop"
+            android:layout_marginStart="@dimen/tv_7_marginStart"
+            android:paddingBottom="@dimen/tv_7_paddingBottom"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/input_daily_reminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/text_view_reminder_time"
+            app:layout_constraintStart_toStartOf="@+id/text_view_reminder_time" />
+
+        <TextView
+            android:id="@+id/text_view_max_dist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/maximum_distance_for_matches_search"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/settings_text_views_margin_top"
+            android:layout_marginStart="@dimen/settings_text_views_margin_start"
+            android:paddingBottom="@dimen/tv_7_paddingBottom"
+            app:layout_constraintTop_toTopOf="@id/input_daily_reminder"
+            app:layout_constraintStart_toStartOf="@id/input_daily_reminder" />
+
+        <EditText
+            android:id="@+id/input_max_dist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/text_view_max_dist"
+            app:layout_constraintStart_toStartOf="@+id/text_view_max_dist" />
+
+        <TextView
+            android:id="@+id/text_view_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/seeking_male_female_nonbinary"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/settings_text_views_margin_top"
+            android:layout_marginStart="@dimen/settings_text_views_margin_start"
+            android:paddingBottom="@dimen/tv_7_paddingBottom"
+            app:layout_constraintTop_toTopOf="@id/input_max_dist"
+            app:layout_constraintStart_toStartOf="@id/input_max_dist" />
+
+        <EditText
+            android:id="@+id/input_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/text_view_gender"
+            app:layout_constraintStart_toStartOf="@+id/text_view_gender" />
+
+        <TextView
+            android:id="@+id/text_view_acct_vis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/account_visibility_public_private"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/settings_text_views_margin_top"
+            android:layout_marginStart="@dimen/settings_text_views_margin_start"
+            android:paddingBottom="@dimen/tv_7_paddingBottom"
+            app:layout_constraintTop_toTopOf="@id/input_gender"
+            app:layout_constraintStart_toStartOf="@id/input_gender" />
+
+        <EditText
+            android:id="@+id/input_acct_vis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/text_view_acct_vis"
+            app:layout_constraintStart_toStartOf="@+id/text_view_acct_vis" />
+
+        <TextView
+            android:id="@+id/text_view_age_range_desired"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/age_range_desired"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/settings_text_views_margin_top"
+            android:layout_marginStart="@dimen/settings_text_views_margin_start"
+            android:paddingBottom="@dimen/tv_7_paddingBottom"
+            app:layout_constraintTop_toTopOf="@id/input_acct_vis"
+            app:layout_constraintStart_toStartOf="@id/input_acct_vis" />
+
+        <EditText
+            android:id="@+id/input_age_range_desired"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/text_view_age_range_desired"
+            app:layout_constraintStart_toStartOf="@+id/text_view_age_range_desired" />
+
+        <Button
+            android:id="@+id/save_settings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_settings"
+            android:layout_marginTop="@dimen/save_settings_button_margin_top"
+            app:layout_constraintTop_toBottomOf="@id/input_age_range_desired"
+            app:layout_constraintStart_toStartOf="@id/input_age_range_desired"
+            />
+
+        <TextView
+            android:id="@+id/text_view_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/empty_string"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/settings_text_views_margin_top"
+            android:layout_marginStart="@dimen/settings_text_views_margin_start"
+            android:paddingTop="50dp"
+            app:layout_constraintTop_toTopOf="@id/save_settings_button"
+            app:layout_constraintStart_toStartOf="@id/save_settings_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,76 +1,104 @@
 package com.example.myapplication;
 
-import android.os.Bundle;
-
-import com.google.android.material.snackbar.Snackbar;
-
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
+public class    MainActivity extends AppCompatActivity {
 
-import com.example.myapplication.databinding.ActivityMainBinding;
+    private static final String TAG = MainActivity.class.getSimpleName();
 
-import android.view.Menu;
-import android.view.MenuItem;
+    private Button submitButton;
 
-public class MainActivity extends AppCompatActivity {
-
-    private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-
-        setSupportActionBar(binding.toolbar);
-
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
-        binding.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        setContentView(R.layout.activity_main);
+        Log.i(TAG, "onCreate()");
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+    public void goToSecondActivity(View view) {
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        EditText nameEditText = findViewById(R.id.nameEditText);
+        EditText ageEditText = findViewById(R.id.ageEditText);
+        EditText bioEditText = findViewById(R.id.bioEditText);
+        EditText jobEditText = findViewById((R.id.jobEditText));
+        submitButton = findViewById(R.id.submitButton);
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (nameEditText.getText().toString().trim().isEmpty()) {
+            nameEditText.setError("Please enter name!");
+            return;
+        }
+        if (ageEditText.getText().toString().trim().isEmpty()) {
+            ageEditText.setError("Please enter age!");
+            return;
+        }
+        if (jobEditText.getText().toString().trim().isEmpty()) {
+            jobEditText.setError("Please enter occupation!");
+            return;
+        }
+        if (bioEditText.getText().toString().trim().isEmpty()) {
+            bioEditText.setError("Please enter description!");
+            return;
         }
 
-        return super.onOptionsItemSelected(item);
+        Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+        intent.putExtra(Constants.KEY_NAME, nameEditText.getText().toString());
+        intent.putExtra(Constants.KEY_AGE, ageEditText.getText().toString());
+        intent.putExtra(Constants.KEY_JOB, jobEditText.getText().toString());
+        intent.putExtra(Constants.KEY_BIO, bioEditText.getText().toString());
+        startActivity(intent);
     }
 
     @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
+    protected void onRestart() {
+        super.onRestart();
+        finish();
+        startActivity(getIntent());
+        Log.i(TAG, "onRestart()");
+    }
+
+    @Override
+    protected  void onStart() {
+        super.onStart();
+        Log.i(TAG, "onStart()");
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        Log.i(TAG, "onSaveInstanceState()");
+        outState.putString(Constants.KEY_BUTTON_TXT, submitButton.getText().toString());
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.i(TAG, "onResume()");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i(TAG, "onPause()");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.i(TAG, "onStop()");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i(TAG, "onDestroy()");
     }
 }
